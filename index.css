@@ -1,0 +1,254 @@
+*{margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    align-items: center;
+    justify-content:space-between;
+    position: sticky;
+    top: 0;
+}
+.logo img{
+    width: 100px;
+}
+.header a{
+    padding: 2px 35px;
+    font-size: larger;
+    text-decoration: none;
+    font-weight: 800;
+    color: azure;
+border-radius: 10px;
+}
+.header a:hover{
+    background-color: white;
+    color: black;
+}
+.header{
+    padding: 40px;   
+}
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: white;
+}
+.home{
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80vh;
+    border-bottom: 3px solid gray;
+    overflow: hidden;
+}
+.greeting h1{
+   overflow: hidden;
+   white-space: nowrap;
+   border-right: 2px solid yellow;
+   animation: text 4s steps(25) infinite alternate;
+}
+@keyframes text{
+    0%{
+        width: 0ch;
+    }
+    25%{
+        width: 6ch;
+    }
+    50%{
+        width: 12ch;
+    }
+    75%{
+        width: 18ch;
+    }
+    100%{
+        width: 25ch;
+    }
+}
+.home h1{
+    font-size: 60px;
+    font-weight: 900;
+    color: wheat;}
+.home h2{
+    font-weight: 900;
+    color: blueviolet;
+    font-size: 30px;
+}
+.home span{
+    font-weight: 900;
+    color: aqua;
+}
+.home::before{
+    background: url(https://tse4.mm.bing.net/th?id=OIP.fGeWWMmlh__WsOZsmrDQ_gHaEK&pid=Api&P=0) no-repeat center center/cover;
+content: "";
+top: 0%;
+width: 100%;
+height: 100%;
+z-index: -1;
+opacity: .9;
+    position: absolute;
+}
+.container{
+    margin-top: 0px;
+    border: solid 4px gray;
+    background-color: gray;
+    width: 100%;
+}
+#about{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.967);
+    box-shadow: 5px 5px 5px 5px gray;
+    transition: .3s scroll;
+    top: 200px;
+    letter-spacing: 3px;
+    word-spacing: 4px;
+    font-size: medium;
+    padding: 20px;
+    font-weight: 400;
+    border-radius: 15px;}
+.heading{
+    color: purple;
+    font-size: 40px;
+    margin-bottom: 20px;}
+.sub{
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:black;
+    color: violet;
+    width: 100%;
+    height: 80vh;
+}
+.image img{
+    filter: invert(100%);
+    margin-top: 10px;
+    width: 400px;
+    height: 400px;
+    animation: imgage 2s infinite  ease-in alternate-reverse;
+}
+@keyframes imgage {
+    to{transform: translateY(-30px); }
+}
+.register{
+    background-color: whitesmoke;
+    justify-content: center;
+}
+.register form{
+        display: flex;
+        align-items: center;
+        padding: 5px;
+    flex-direction: column;
+}
+.register form input{
+    padding: 5px;
+    margin: 10px;
+    width: 70%;
+    text-align: center;
+    font-size: larger;
+}
+#Branch{
+    padding: 5px;
+    margin: 10px;
+    width: 70%;
+    text-align: center;
+    font-size: larger;
+}
+footer{
+    background-color: black;
+    width: 100%;
+    min-height: auto;
+    color: white;
+    padding: 35px;
+    justify-content:center;   
+}
+@media (max-width:768px){
+    .hamburger{
+        display: block;
+    }
+    .hamburger.chalu .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.chalu .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.chalu .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);  
+    }
+    .header{
+        position: fixed;
+        top: 0px;
+        height: 50vh;
+        z-index: 10;
+flex-direction: column;
+display: none;
+width: 100%;
+        background-color: black;
+         transition: .7s;
+    }
+    .header a{
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+    }
+.header.chalu{
+    display: block;  
+}
+.hamburger.chalu{
+    z-index: 12;
+}
+.home{
+    padding-top: 40px;
+}
+.home h1{
+    font-size: 30px;}
+.home h2{
+    font-size: 20px;
+}
+.home span{
+    display: none;
+}
+.image img{
+    width: 200px;
+    height: 200px;
+   }
+   .moto{
+    font-size: 15px;
+   }
+   .sub{
+    border-radius: 15px;
+   }
+   #about{
+width: 90%;
+   }
+   textarea{
+    width: 100%;
+   }
+}
+@media (max-width:430px){
+
+.sub{
+    width: 100%;
+    border-radius: 35px;
+    margin: 0%;
+    margin-bottom: 10px;
+}
+#about{
+    width: 95%;
+       }
+
+}
